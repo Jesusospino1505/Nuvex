@@ -940,7 +940,7 @@ main { display: block; }
   z-index: 1;
   display: block;
   /* Ajusta el tamaño según requieras */
-  width: 40px; 
+  width: 80px; 
   height: auto;
 }
 
@@ -952,7 +952,6 @@ main { display: block; }
   top: -6px;     /* Ajusta el desplazamiento deseado */
   width: 70%;    /* O utiliza dimensiones fijas como px/rem */
   height: 70%;
-  background: var(--marigold);
-  border-radius: var(--r-lg);
+  background: #FFFFFF;
   z-index: -1;
 }
