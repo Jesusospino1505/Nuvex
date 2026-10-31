@@ -924,3 +924,35 @@ main { display: block; }
   .hero-cta { width: 100%; }
   .hero-cta .btn2 { flex: 1 1 auto; justify-content: center; }
 }
+
+
+
+/* Contenedor relativo que crea su propio contexto de apilamiento */
+.logo-icon-wrapper {
+  position: relative;
+  display: inline-block; /* O inline-flex según tu maquetación */
+  isolation: isolate;    /* Evita que el pseudoelemento se vaya detrás del fondo del footer/header */
+}
+
+/* La imagen debe estar por encima del bloque */
+.logo-icon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  /* Ajusta el tamaño según requieras */
+  width: 40px; 
+  height: auto;
+}
+
+/* Bloque decorativo detrás de la imagen */
+.logo-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  right: -6px;   /* Ajusta el desplazamiento deseado */
+  top: -6px;     /* Ajusta el desplazamiento deseado */
+  width: 70%;    /* O utiliza dimensiones fijas como px/rem */
+  height: 70%;
+  background: var(--marigold);
+  border-radius: var(--r-lg);
+  z-index: -1;
+}
